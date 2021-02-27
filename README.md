@@ -10,14 +10,19 @@ Setting up with Evernote:
 You will need to establish an "application" with Evernote. This will allow you to get the tokens you need to interact with Evernote programmatically. The application process generates a public key and a secret id. You won't actually need that for using this script, but you will want to keep them in a safe place so you can access your account in the future (in particular, when you get the tokens). 
 
 Once you have the account, you can generate a sandbox token by going to 
+
 	https://www.evernote.com/api/DeveloperToken.action 
+
 Once you have completed testing, you can request a dev token. This can take a week or so for processing. 
 The dev token expires every 12 months, and you will need to go to 
+
 	https://dev.evernote.com/get-token/ 
+
 and use your secret key to gene
 
 After generating these tokens, you store them in a configuration file. 
 The default config file is named transform_kindle_highlights_config.py and contains 2 lines
+
 	evernote_sandbox_dev_token = "your evernote sandbox token"
 	evernote_dev_token = 'your evernote dev token' 
 
@@ -35,10 +40,10 @@ If the highlights.html file and the config file are all in the same directory (o
 It will also create a note in the "Books" notebook associated with your account. If you don't have a Books notebook, it will create the note in the default notebook. This new note will be available effectively immediately in most cases, but may take up to a minute to be visible in the account. 
 
 The format of the note is: 
+
 	<Book Title> (as the note title) 
 	<Author> (medium header) 
 	<Today's date> (medium header) 
-
 	Key highlights: 
 	<All of your highlights as a bulleted list, one bullet per highlight> 
 
